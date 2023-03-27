@@ -1,3 +1,13 @@
+  const resizeOps = () => {
+    document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+  };
+
+  resizeOps();
+  window.addEventListener("resize", resizeOps);
+html, body {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
 body {
     margin: 0;
     text-align: center;
